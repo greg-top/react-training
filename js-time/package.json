@@ -1,0 +1,16 @@
+{
+  "name": "js-time",
+  "version": "1.0.0",
+  "description": "",
+  "main": "time.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "now": "node time.js",
+    "now-with-npm": "node rozszerzenie/time.js"
+  },
+  "author": "GT",
+  "license": "ISC",
+  "dependencies": {
+    "moment": "^2.29.1"
+  }
+}

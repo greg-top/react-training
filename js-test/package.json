@@ -1,0 +1,19 @@
+{
+  "name": "js-test",
+  "version": "1.0.0",
+  "description": "testowe",
+  "main": "index.js",
+  "scripts": {
+    "ok": "echo \"Hello GT\"",
+    "preconsole": "echo 'Przed konsola'",
+    "console": "node index.js",
+    "postconsole": "echo 'Po kosnoli'",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "GT",
+  "license": "ISC",
+  "dependencies": {
+    "is-odd": "^3.0.1"
+  },
+  "devDependencies": {}
+}
