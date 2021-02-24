@@ -1,2 +1,2 @@
-# Kura React.js p
+# Kura React.js
 poziom podstawowy i zaawansowany
