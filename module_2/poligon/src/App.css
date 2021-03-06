@@ -1,0 +1,9 @@
+.news {
+  background-color: #e74c3c;
+  border: #3498db 1px solid;
+  padding: 10px;
+}
+
+.news p {
+  background-color: #f39c12;
+}

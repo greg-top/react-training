@@ -1,0 +1,59 @@
+/* Flex posiada oddzielny CSS celem pokazania działania flexboxa. W aplikacji komercyjnej 
+można połączyć oba pliki CSS (clickbait.css i clickbait-flex.css) za pomocą preprocesora */
+
+.clickbait {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  align-content: flex-start;
+}
+.card__intro--cut {
+  font-size: 8px;;
+}
+.card {
+  display: flex;
+
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-basis: 100px;
+  flex-grow: 0;
+
+  transition: flex-grow 0.5s ease, height 0.5s ease;
+}
+.card__body {
+  order: 2;
+
+  opacity: 0; /*a11y*/
+  height: 0; /*a11y*/
+  width: 0;
+  transition: all 1s ease-in;
+  transition-property: opacity, height;
+  overflow-x: hidden;
+  overflow-y: scroll;
+}
+.card:hover {
+  flex-grow: 1;
+  justify-content: flex-start;
+  align-items: flex-start;
+  height: 150px;
+}
+.card:hover .card__number {
+  margin-bottom: 20px;
+}
+.card:hover .card__body {
+  opacity: 1;
+  height: 100%;
+  width: 70%;
+  overflow: hidden;
+  margin-top: 5px;
+}
+@media only screen and (min-width: 1360.33px) {
+  .clickbait {
+    margin: 50px;
+  }
+  .card__body {
+    overflow-y: hidden;
+  }
+}
