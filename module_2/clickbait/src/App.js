@@ -23,8 +23,8 @@ function BlogTile({title, intro}) {
   return (
     <div className="card">
       <span className="card__number"></span>
-      <span className="card__intro--cut">{cutIntro(intro, 15)}</span>
-      <span className="card__body">{intro}</span>
+      <span className="card__intro--cut">{title}</span>
+      <span className="card__body">{cutIntro(intro, 15)}</span>
     </div>
   )
 }

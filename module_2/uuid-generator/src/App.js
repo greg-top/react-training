@@ -3,7 +3,7 @@ import { v4 as uuidv4 } from 'uuid';
 
 const uuidNumber = uuidv4();
 
-function Uuid({color}) {
+function Uuid() {
   return (
   <div className="uuid-container">
     <div className="uuid__card">

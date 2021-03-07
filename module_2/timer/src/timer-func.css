@@ -1,0 +1,14 @@
+.timer-function__outer {
+    align-items: center;
+    background-color: #2ecc71;
+    color: #ecf0f1;
+    display: flex;
+    height: 50vh;
+    justify-content: center;
+    width: 100vw;
+  }
+
+  .timer-function__timer {
+    font-family: 'Roboto', sans-serif;
+    font-size: 20px;
+  }

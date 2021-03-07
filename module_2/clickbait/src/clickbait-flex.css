@@ -9,7 +9,8 @@ można połączyć oba pliki CSS (clickbait.css i clickbait-flex.css) za pomocą
   align-content: flex-start;
 }
 .card__intro--cut {
-  font-size: 8px;;
+  font-size: 8px;
+  text-align: center;
 }
 .card {
   display: flex;
