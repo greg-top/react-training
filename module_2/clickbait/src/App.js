@@ -10,8 +10,6 @@ const posts = [
 ]
 
 const cutIntro = (el, chars) => {
-  console.log(`el: ${el}`);
-  console.log(`chars: ${chars}`);
   if (el.length > chars) {
     return `${el.substring(0, chars)}...`;
   } else {
