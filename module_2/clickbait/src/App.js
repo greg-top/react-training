@@ -1,5 +1,4 @@
-import './clickbait.css';
-import './clickbait-flex.css';
+import BlogTile from './components/BlogTile';
 
 const posts = [
   { id: 1, title: 'Pilne: Co to był za dzień!', intro: 'Tego świat jeszcze nie widział'},
@@ -8,24 +7,6 @@ const posts = [
     intro: 'Po przegranym zakładzie z Piotrem Żyłą nasz mistrz olimpijski zgolił wąsy'
   }
 ]
-
-const cutIntro = (el, chars) => {
-  if (el.length > chars) {
-    return `${el.substring(0, chars)}...`;
-  } else {
-    return el;
-  }
-}
-
-function BlogTile({title, intro}) {
-  return (
-    <div className="card">
-      <span className="card__number"></span>
-      <span className="card__intro--cut">{title}</span>
-      <span className="card__body">{cutIntro(intro, 15)}</span>
-    </div>
-  )
-}
 
 function App() {
   return (

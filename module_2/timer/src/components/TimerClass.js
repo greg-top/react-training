@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import '../timer-class.css';
+import './timer-class.css';
 
 //komponent klasowy
 class TimerClass extends React.Component {

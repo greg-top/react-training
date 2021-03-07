@@ -1,5 +1,5 @@
 import React, {useState, useEffect} from 'react';
-import '../timer-func.css';
+import './timer-func.css';
 
 //komponent funkcyjny ze stanem (hooks)
 function TimerHooks() {
