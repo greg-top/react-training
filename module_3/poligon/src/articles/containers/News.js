@@ -1,8 +1,8 @@
 
 import React, {useState} from 'react';
 
-import Author from './Author';
-import Scoring from './Scoring';
+import Author from '../components/Author';
+import Scoring from '../components/Scoring';
 
 //CSS in JS
 const yellow = '#f39c12';
