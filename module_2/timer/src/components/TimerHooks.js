@@ -9,7 +9,7 @@ function TimerHooks() {
       const countTime = setInterval(()=> {
         changeSeconds(time += 1);
       }, 1000);
-    });
+    }, [time]);
 
     return (
       <div className="timer-function__outer">

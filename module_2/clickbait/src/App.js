@@ -11,7 +11,7 @@ const posts = [
 function App() {
   return (
     <div className="clickbait">
-      {posts.map((post, index) => {
+      {posts.map((post) => {
         return <BlogTile title={post.title} intro={post.intro} key={post.id} />
       })}
     </div>

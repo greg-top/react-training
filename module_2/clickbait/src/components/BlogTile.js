@@ -4,9 +4,9 @@ import './blog-flex.css';
 const cutIntro = (el, chars) => {
   if (el.length > chars) {
     return `${el.substring(0, chars)}...`;
-  } else {
-    return el;
   }
+
+  return el;
 }
 
 function BlogTile({title, intro}) {

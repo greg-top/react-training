@@ -15,45 +15,45 @@ const styles = {
   }
 }
 
-// //komponent klasowy
-// class News extends React.Component {
+//komponent klasowy
+class News extends React.Component {
 
-//   //korzystanie ze state za pomocą kontruktora
-//   // constructor(props) {
-//   //   super(props);
-//   //   this.state = {
-//   //     score: 5
-//   //   }
-//   // }
+  //korzystanie ze state za pomocą kontruktora
+  // constructor(props) {
+  //   super(props);
+  //   this.state = {
+  //     score: 5
+  //   }
+  // }
 
-//   //konfiguracja state 
-//   state = {
-//     score: 6
-//   }
+  //konfiguracja state 
+  state = {
+    score: 6
+  }
 
-//   //stan życia komponentu (omówione dalej w kursie)
-//   componentDidMount() {
-//     let loader = true;
-//     //zmiana state 
-//     this.setState({score: 8}, ()=> {
-//       loader = false;
-//     });
-//   }
+  //stan życia komponentu (omówione dalej w kursie)
+  componentDidMount() {
+    let loader = true;
+    //zmiana state 
+    this.setState({score: 8}, ()=> {
+      loader = false;
+    });
+  }
 
-//   render() {
+  render() {
 
-//     const {heading, intro} = this.props;
-//     const {score} = this.state;
+    const {heading, intro} = this.props;
+    const {score} = this.state;
 
-//     return (
-//       <div className="news">
-//         <h2>{heading}</h2>
-//         <p>{intro}</p>
-//         <p>{score}</p>
-//       </div>
-//     );
-//   }
-// }
+    return (
+      <div className="news">
+        <h2>{heading}</h2>
+        <p>{intro}</p>
+        <p>{score}</p>
+      </div>
+    );
+  }
+}
 
 //komponent funkcyjny
 // function News({heading, intro}) {
