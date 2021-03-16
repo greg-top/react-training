@@ -1,32 +1,24 @@
 
-import React, {useState} from 'react';
+import React from 'react';
 
-import Author from '../components/Author';
-import Scoring from '../components/Scoring';
+import News from '../components/News';
 
-//CSS in JS
-const yellow = '#f39c12';
-const styles = {
-  backgroundColor: '#e74c3c',
-  border: '#3498db 1px solid',
-  padding: 30,
-  paragraph: {
-    backgroundColor: yellow
+const data = [
+  { id: 1, author: 'Greg Topolewski', title: 'Pilne: Co to był za dzień!', intro: 'Tego świat jeszcze nie widział'},
+  { id: 2, author: 'Greg Topolewski', title: 'Wszyscy zazdroszą Polakom!', intro: 'Takiego clickbajtowego tytułu jeszcze nikt nie wymyślił'},
+  { id: 3, author: 'Greg Topolewski', title: 'Adam Małysz Zgolił wąs',
+    intro: 'Po przegranym zakładzie z Piotrem Żyłą nasz mistrz olimpijski zgolił wąsy'
   }
+];
+
+function Articles() {
+  return (
+    <div>
+      {data.map((el) => (
+        <News key = { `news-${el.id}` } header = { el.title } intro = { el.intro } author = { el.author } />
+      ))}
+    </div>
+  );
 }
 
-// komponent funkcyjny ze stanem (hooks)
-function News({heading, intro, author}) {
-    const [score] = useState(11);
-  
-    return (
-      <div className="news" style={styles}>
-        <h2>{heading}</h2>
-        <p style={styles.paragraph}>{intro}</p>
-        <Author author={author} />
-        <Scoring score={score} />
-      </div>
-    );
-  }
-
-  export default News;
+export default Articles;
