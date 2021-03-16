@@ -1,3 +1,1 @@
-import Author from './Author';
-
-export default Author;
+export { default } from './Author';
