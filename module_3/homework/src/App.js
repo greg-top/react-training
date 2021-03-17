@@ -1,6 +1,7 @@
 import React from 'react';
 
-import Form from './pages/FormView';
+import FormView from './pages/FormView';
+import CardView from './pages/CardView';
 
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
@@ -11,7 +12,8 @@ library.add(fab, faCheckSquare, faCoffee, faUser)
 function App() {
   return (
     <div>
-      <Form />
+      <FormView />
+      <CardView />
     </div>
   );
 }
