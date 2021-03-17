@@ -1,10 +1,11 @@
 import React from 'react';
 
 import { Button, Input, Textarea } from '../components/Form';
+import './assets/css/form-view.css';
 
 function FormView() {
     return (
-        <>
+        <div className="form-view">
             <div>
                 <h1>Form View - zadania 1-3</h1>
                 <h2>Zadanie 1 + modyfikacje</h2>
@@ -50,7 +51,7 @@ function FormView() {
                     placeholder="Tekst do textarea" 
                 />
             </div>
-        </>
+        </div>
     );
 }
 
