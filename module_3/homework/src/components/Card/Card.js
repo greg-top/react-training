@@ -1,60 +1,28 @@
 import React from 'react';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import CardHeader from './CardHeader';
+import CardBody from './CardBody';
+import CardFooter from './CardFooter';
+import CardCollapse from './CardCollapse';
 import './assets/card.css';
-import image from './assets/paella.jpg';
 
-const months = [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
-    'July',
-    'August',
-    'September',
-    'October',
-    'November',
-    'December'
-];
-const date = new Date();
-const day = date.getDate();
-const month = months[date.getMonth()];
-const year = date.getFullYear();
-
-const toggleCollapse = () => {
-    const collapse = document.querySelector('.card__collapse');
-    collapse.classList.toggle('show');
-    
-    const icon = document.querySelector('.card__footer svg.fa-chevron-down');
-    icon.classList.toggle('rotate'); 
-}
-
-function Card({ initials, title, intro, showMore, collapse }) {
+function Card() {
     return (
         <div className="card">
-            <div className="card__header">
-                <p className="card__header-initials">{initials}</p>
-                <div className="card__header-title--container">
-                    <p className="card__header-title">{title}</p>    
-                    <p className="card__header-date">{month} {day}, {year}</p>
-                </div>
-            </div>
-            <div className="card__body">
-                <div className="card__body-img--container">
-                    <img src={image} className="card__body-img" alt={title} />
-                </div>
-                <div className="card__body-intro">
-                    <p>{intro}</p>
-                </div>
-            </div>
-            <div className="card__footer">
-                <FontAwesomeIcon icon="chevron-down" onClick={toggleCollapse} />
-            </div>
-            <div className="card__collapse hidden">
-                <p>{collapse}</p>
-            </div>
+            <CardHeader initials="G" title="Shrimp and Chorizo Paella" />
+            <CardBody intro="This impressive paella is a perfect party dish and a fun meal to cook together with your guests. 
+                Add 1 cup of frozen peas along with the mussels, if you like." />
+            <CardFooter showMore={true} />
+            <CardCollapse collapse="Method: Heat 1/2 cup of the broth in a pot until simmering, add saffron and set aside for 
+                10 minutes. Heat oil in a (14- to 16-inch) paella pan or a large, deep skillet over medium-high heat. Add chicken, 
+                shrimp and chorizo, and cook, stirring occasionally until lightly browned, 6 to 8 minutes. Transfer shrimp to 
+                a large plate and set aside, leaving chicken and chorizo in the pan. Add pimentón, bay leaves, garlic, tomatoes, 
+                onion, salt and pepper, and cook, stirring often until thickened and fragrant, about 10 minutes. Add saffron 
+                broth and remaining 4 1/2 cups chicken broth; bring to a boil. Add rice and stir very gently to distribute. 
+                Top with artichokes and peppers, and cook without stirring, until most of the liquid is absorbed, 15 to 18 minutes. 
+                Reduce heat to medium-low, add reserved shrimp and mussels, tucking them down into the rice, and cook again without 
+                stirring, until mussels have opened and rice is just tender, 5 to 7 minutes more. 
+                (Discard any mussels that don’t open.) Set aside off of the heat to let rest for 10 minutes, and then serve." />
         </div>
     );
 }
