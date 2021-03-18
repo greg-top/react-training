@@ -3,6 +3,7 @@ import React from 'react';
 import FormView from './pages/FormView';
 import CardView from './pages/CardView';
 import MenuView from './pages/MenuView';
+import EmployeesView from './pages/EmployeesView';
 
 import './assets/css/fonts.css';
 
@@ -18,6 +19,7 @@ function App() {
       <FormView />
       <CardView />
       <MenuView />
+      <EmployeesView />
     </div>
   );
 }

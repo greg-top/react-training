@@ -1,0 +1,39 @@
+.employees--outer {
+    display: flex;
+    justify-content: center;
+}
+
+.employees__list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+.employees__list-container {
+    width: 50%;
+}
+
+.employees__list-element {
+    cursor: pointer;
+}
+
+.employees__details {
+    text-align: center;
+    width: 50%;
+}
+
+.employee__details h3 {
+    margin: 0;
+}
+
+.employees__list-element {
+    margin: 5px 0;
+    padding: 10px 30px;
+}
+
+.employees__list-element--active {
+    color: #f00;
+}
+
+.hidden {
+    display: none;
+}
