@@ -6,7 +6,7 @@ import './assets/css/card-view.css';
 function CardView() {
     return (
         <div className="card-view">
-            <h1>Zadanie 4 - Card</h1>
+            <h2>Zadanie 4 - Card</h2>
             <Card />
         </div>
     );

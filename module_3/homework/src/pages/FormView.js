@@ -7,8 +7,8 @@ function FormView() {
     return (
         <div className="form-view">
             <div>
-                <h1>Form View - zadania 1-3</h1>
-                <h2>Zadanie 1 + modyfikacje</h2>
+                <h2>Form View - zadania 1-3</h2>
+                <h3>Zadanie 1 + modyfikacje</h3>
                 <p>Button component with defined style props</p>
                 <Button background="red" color="yellow">Test</Button>
 
@@ -19,7 +19,7 @@ function FormView() {
                 <Button icon="user">Test 3</Button>
             </div>
             <div>
-                <h2>Zadanie 2</h2>
+                <h3>Zadanie 2</h3>
                 <p>Input ze zdefiniowanym propsem zbiorowym dla border</p>
                 <Input 
                     background="orange" 
