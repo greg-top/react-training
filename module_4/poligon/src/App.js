@@ -1,7 +1,8 @@
 import React from 'react';
 
 import Header from './components/Header';
-import Articles from './pages/Articles';
+// import Articles from './pages/Articles';
+import Form from './pages/Form';
 import Content from './components/Content';
 import Footer from './components/Footer';
 
@@ -14,7 +15,8 @@ function App() {
     <>
       <Header />
       <Content>
-        <Articles />
+        {/* <Articles /> */}
+        <Form />
       </Content>
       <Footer />
     </>
