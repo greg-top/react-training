@@ -11,23 +11,14 @@ function EmployeeDetails() {
         <div className="employees__details">
             <p>Dane Pracownika:</p>
             {data.map((dataset, index) => {
-                if (index===0) {
+                const hiddenClass = index === 0 ? "" : "hidden";
                     return (
-                        <div key={dataset.id} className="employee__details" id={dataset.id}>
+                        <div key={dataset.id} className={`employee__details ${hiddenClass}`} id={dataset.id}>
                             <h3>{dataset.fullName}</h3>
                             <p>Pesel: {dataset.pesel}</p>
                             <address>{dataset.address}</address>
                         </div>
                     );
-                } else {
-                    return (
-                        <div key={dataset.id} className="employee__details hidden" id={dataset.id}>
-                            <h3>{dataset.fullName}</h3>
-                            <p>Pesel: {dataset.pesel}</p>
-                            <address>{dataset.address}</address>
-                        </div>
-                    );
-                }
                 })}
         </div>
     );
