@@ -1,4 +1,4 @@
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 
 function useInput( initValue = "" ) {
     const [value, setValue] = useState(initValue);
@@ -16,16 +16,8 @@ function Form() {
     const [surname, setSurname] = useInput();
     const [age, setAge] = useInput();
 
-    const surnameInput = useRef();
-
     const handleSubmit = (e) => {
         e.preventDefault();
-    }
-
-    const handleFocusClick = () => {
-        surnameInput.current.focus();
-        surnameInput.current.value = "Kowalski 2";
-        surnameInput.current.style.color = "#0f0";
     }
 
     const handleClick = () => {
@@ -38,22 +30,17 @@ function Form() {
                 <input name="name" type="text" placeholder="Name" onChange={setName} />
             </div>
             <div>
-                <input name="surname" ref={surnameInput} type="text" placeholder="Surname" onChange={setSurname} />
+                <input name="surname" type="text" placeholder="Surname" onChange={setSurname} />
             </div>
             <div>
                 <input name="age" type="text" placeholder="Age" onChange={setAge} />
             </div>
             <button onClick={handleClick}>React Button</button>
-            <button onClick={handleFocusClick}>Focus Button</button>
         </form>
     );
 }
 
 // class Form extends React.Component {
-//     constructor(props) {
-//         super(props);
-//         this.surnameInput = React.createRef();
-//     }
 //     state = {
 //         name: "",
 //         surname: "",
@@ -72,13 +59,6 @@ function Form() {
 
 //         if(keyValue) this.setState({ [keyName] : e.target.value });
 //     }
-
-//     handleFocusClick = () => {
-//         this.surnameInput.current.focus();
-//         this.surnameInput.current.value = "Kowalski";
-//         this.surnameInput.current.style.color = "#f00";
-//     }
-
 //     render() {
 //         return (
 //         <form onSubmit={this.handleSubmit}> 
@@ -86,13 +66,12 @@ function Form() {
 //                 <input name="name" type="text" placeholder="Name" onChange={this.handleChange} />
 //             </div>
 //             <div>
-//                 <input name="surname" ref={this.surnameInput} type="text" placeholder="Surname" onChange={this.handleChange} />
+//                 <input name="surname" type="text" placeholder="Surname" onChange={this.handleChange} />
 //             </div>
 //             <div>
 //                 <input name="age" type="text" placeholder="Age" onChange={this.handleChange} />
 //             </div>
 //             <button onClick={this.handleClick}>React Button</button>
-//             <button onClick={this.handleFocusClick}>Foucs Button</button>
 //         </form>
 //         );
 //     }
